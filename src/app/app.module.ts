@@ -7,6 +7,10 @@ import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { SearchComponent } from './components/search/search.component';
 import { ArtistComponent } from './components/artist/artist.component';
+import { CardComponent } from './components/shared/card/card.component';
+import { LoaderComponent } from './components/shared/loader/loader.component';
+import { NoimagePipe } from './pipes/noimage.pipe';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -14,10 +18,14 @@ import { ArtistComponent } from './components/artist/artist.component';
     NavbarComponent,
     HomeComponent,
     SearchComponent,
-    ArtistComponent
+    ArtistComponent,
+    CardComponent,
+    LoaderComponent,
+    NoimagePipe
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule
   ],
   providers: [],
