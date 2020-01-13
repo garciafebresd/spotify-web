@@ -8,9 +8,7 @@ import { Router } from '@angular/router';
 export class CardComponent {
 
   @Input() items: any[] = [];
-  constructor(private router: Router) {
-
-  }
+  constructor(private router: Router) { }
 
   showArtist(item: any) {
 

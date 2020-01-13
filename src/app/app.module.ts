@@ -11,6 +11,7 @@ import { CardComponent } from './components/shared/card/card.component';
 import { LoaderComponent } from './components/shared/loader/loader.component';
 import { NoimagePipe } from './pipes/noimage.pipe';
 import { HttpClientModule } from '@angular/common/http';
+import { DomseguroPipe } from './pipes/domseguro.pipe';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { HttpClientModule } from '@angular/common/http';
     ArtistComponent,
     CardComponent,
     LoaderComponent,
-    NoimagePipe
+    NoimagePipe,
+    DomseguroPipe
   ],
   imports: [
     BrowserModule,
