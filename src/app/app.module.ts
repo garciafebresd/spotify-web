@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -9,8 +11,9 @@ import { SearchComponent } from './components/search/search.component';
 import { ArtistComponent } from './components/artist/artist.component';
 import { CardComponent } from './components/shared/card/card.component';
 import { LoaderComponent } from './components/shared/loader/loader.component';
+import { ErrorComponent } from './components/shared/error/error.component';
+
 import { NoimagePipe } from './pipes/noimage.pipe';
-import { HttpClientModule } from '@angular/common/http';
 import { DomseguroPipe } from './pipes/domseguro.pipe';
 
 @NgModule({
@@ -23,7 +26,8 @@ import { DomseguroPipe } from './pipes/domseguro.pipe';
     CardComponent,
     LoaderComponent,
     NoimagePipe,
-    DomseguroPipe
+    DomseguroPipe,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,

@@ -6,4 +6,6 @@
 
 <app-loader *ngIf="loader"></app-loader>
 
-<app-card *ngIf="!loader" [items]="artists"></app-card>
+<app-error [messageError]="messageError" *ngIf="error"></app-error>
+
+<app-card *ngIf="!loader && !error" [items]="artists"></app-card>

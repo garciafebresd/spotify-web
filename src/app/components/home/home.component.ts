@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { SpotifyService } from '../../services/spotify.service';
 
 @Component({
@@ -9,15 +9,26 @@ export class HomeComponent {
 
   newReleases: any[] = [];
   loader: boolean;
+  error: boolean;
+  messageError: string;
 
-  constructor(private SpotifyService: SpotifyService) {
+  constructor(private spotifyService: SpotifyService) {
 
     this.loader = true;
+    this.loader = false;
+    this.messageError = '';
 
-    this.SpotifyService.getNewReleases()
-      .subscribe((data: any) => {
+    this.spotifyService.getNewReleases().subscribe(data => {
+
         this.newReleases = data;
         this.loader = false;
+
+      }, responseError => {
+
+        this.loader = false;
+        this.error = true;
+        this.messageError = responseError.error.error.message;
+
       });
   }
 
