@@ -15,6 +15,7 @@ import { ErrorComponent } from './components/shared/error/error.component';
 
 import { NoimagePipe } from './pipes/noimage.pipe';
 import { DomseguroPipe } from './pipes/domseguro.pipe';
+import { SpotifyService } from './services/spotify.service';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,9 @@ import { DomseguroPipe } from './pipes/domseguro.pipe';
     HttpClientModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    SpotifyService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

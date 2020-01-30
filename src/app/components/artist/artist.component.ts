@@ -18,7 +18,6 @@ export class ArtistComponent {
   constructor(private activatedRoute: ActivatedRoute,
               private spotifyService: SpotifyService) {
 
-    this.loader = true;
     this.loader = false;
 
     this.activatedRoute.params.subscribe(params => {
@@ -41,8 +40,8 @@ export class ArtistComponent {
 
     }, error => {
 
+      this.loader = false;
       this.error = true;
-
     });
   }
 
